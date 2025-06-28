@@ -7,18 +7,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 1.5rem;
-}
 
-p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #555;
-  line-height: 1.6;
-}
 
 .form {
   display: flex;
