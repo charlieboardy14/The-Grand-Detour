@@ -33,23 +33,32 @@
 
 .image {
   width: 100%;
-  height: 80%; /* Give more space to the image */
+  height: 100%; /* Image fills the entire slide */
   object-fit: cover; /* Ensures the image covers the area, cropping if necessary */
   border-radius: 8px; /* Rounded corners for the image */
-  margin-bottom: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .caption {
-  position: static;
-  background-color: transparent;
-  color: #333;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); /* Gradient overlay for readability */
+  color: white;
   text-align: center;
-  padding: 0;
+  padding: 2rem 1rem 1rem;
+  box-sizing: border-box;
+  z-index: 2;
 }
 
 .caption h3 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.5em;
+  font-size: 1.8em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Text shadow for readability */
 }
 
 .caption a {
@@ -61,6 +70,7 @@
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.2s ease-in-out;
+  text-shadow: none; /* Remove text shadow from button */
 }
 
 .caption a:hover {
