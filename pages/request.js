@@ -40,7 +40,7 @@ export default function Request() {
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="car-picture">Picture of Your Car (Optional - Max 5MB):</label>
+            <label htmlFor="car-picture">Picture of Your Car (Optional - Max 10MB):</label>
             <input type="file" name="car-picture" id="car-picture" accept="image/*" className={styles.fileInput} />
           </div>
 
