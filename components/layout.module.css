@@ -1,0 +1,185 @@
+.container {
+  max-width: 48rem; /* Increased max-width for better readability */
+  padding: 0 1.5rem;
+  margin: 3rem auto 6rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem; /* Increased padding */
+  border-bottom: 1px solid #eee; /* Lighter border */
+  margin-bottom: 3rem; /* Space below header */
+}
+
+.headerContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  text-decoration: none;
+  margin: 0;
+}
+
+.strapline {
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2.5rem; /* Larger logo text */
+  font-weight: bold;
+  color: #222; /* Darker color for prominence */
+  text-decoration: none;
+  margin: 0;
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: #0070f3; /* Subtle hover effect */
+}
+
+.header nav {
+  text-align: right;
+}
+
+.header nav a {
+  margin: 0 10px;
+  font-weight: 500;
+  color: #555;
+  text-decoration: none;
+}
+
+.header nav a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.strapline {
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Adjustments for post pages */
+.postTitle {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+.lightText {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.searchContainer {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Limit search input width */
+  margin-top: 1rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.searchResults li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.searchResults li:last-child {
+  border-bottom: none;
+}
+
+.searchResults li a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.searchResults li a:hover {
+  background-color: #f9f9f9;
+}
+
+
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+    margin: 2rem auto 4rem;
+  }
+
+  .headerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .header nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header nav a {
+    margin: 0 8px;
+    font-size: 0.9em;
+  }
+
+  .headerTitle {
+    font-size: 2.2rem;
+  }
+
+  .postTitle {
+    font-size: 2rem;
+  }
+
+  .scrollerContent h2 {
+    font-size: 1.8rem;
+  }
+
+  .scrollerContent p {
+    font-size: 1em;
+  }
+
+  .postScroller {
+    padding: 1.5rem;
+  }
+}
