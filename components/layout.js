@@ -19,7 +19,7 @@ export default function Layout({ children, home }) {
         <div className={styles.headerContent}>
           <a className={styles.logo}>The Grand Detour</a>
           <nav>
-            <Link href="/">Home</Link> | <Link href="/posts">Blog</Link> | <Link href="/admin">Admin</Link> | <Link href="/contact">Contact</Link>
+            <Link href="/">Home</Link> | <Link href="/posts">Blog</Link> | <Link href="/admin">Admin</Link> | <Link href="/contact">Contact</Link> | <Link href="/request">Request a Hitpiece</Link>
           </nav>
         </div>
         <p className={styles.strapline}>Hitpieces On Any Car (Especially Small Hatchbacks)</p>
