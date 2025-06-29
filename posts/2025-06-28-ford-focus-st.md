@@ -1,7 +1,7 @@
 ---
-title: 'The Ford Focus ST: Because Your Mid-Life Crisis Needed a Soundtrack'
-date: '2025-06-28'
-image: '/images/focus-st-placeholder.jpg' # Placeholder image, you can replace this
+title: "The Ford Focus ST: Because Your Mid-Life Crisis Needed a Soundtrack"
+date: 2025-06-28
+image: /uploads/784c6f414abcc16a27327b507f93853d.webp
 ---
 
 Ah, the Ford Focus ST. Not just a car, but a lifestyle choice. A choice that loudly proclaims, "I have disposable income, a penchant for baseball caps worn backwards, and a deep, abiding need for everyone within a three-mile radius to know I'm accelerating." It's the automotive equivalent of a teenager's first vape cloud – dense, obnoxious, and utterly inescapable.
