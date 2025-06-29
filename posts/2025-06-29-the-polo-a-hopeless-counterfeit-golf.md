@@ -2,6 +2,7 @@
 layout: blog
 title: "The Polo: A Hopeless Counterfeit Golf"
 date: 2025-06-29T19:22:47.853Z
+image: /uploads/25vwpollif5drbeifr2_800.jpg
 ---
 I am proudly ignorant of the aesthetic difference between the Golf and the Polo, a wilful blindness born from the sheer boredom their designs induce. The Polo, in particular, looks less like a car and more like a doodle sketched by a half-asleep teenager who then slapped a title on it.
 
