@@ -13,8 +13,6 @@ But the Picanto's true genius lies in its ability to make you question your life
 
 It's not a bad car, not really. It's just... nothing. It's the automotive equivalent of a sigh, a four-wheeled shrug that says, "I guess this will do." And in a world of passion, excitement, and automotive artistry, "good enough" is the most damning indictment of all.
 
-But, after all is said, it is the world's single greatest starter car: The Red Fate.
-
-
+But, after all is said, it is the world's single greatest starter car.
 
 R﻿IP - Replaced.
