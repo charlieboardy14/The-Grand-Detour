@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Script from 'next/script';
 import styles from './layout.module.css';
 
 export const siteTitle = 'The Grand Detour';
@@ -14,16 +15,17 @@ export default function Layout({ children, home }) {
           content="The latest news, reviews, and stories from the automotive world."
         />
         <meta name="og:title" content={siteTitle} />
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMZVLSXEFN"></script>
-        <script>
+      </Head>
+      {/* Google Analytics */}
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-EMZVLSXEFN" />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'G-EMZVLSXEFN');
-        </script>
-      </Head>
+        `}
+      </Script>
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <a className={styles.logo}>The Grand Detour</a>
