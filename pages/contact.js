@@ -1,16 +1,17 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
+import styles from '../styles/contact.module.css';
 
 export default function Contact() {
   return (
     <Layout>
       <Head>
-        <title>Contact Us</title>
+        <title>Get in Touch</title>
       </Head>
-      <section>
-        <h2>Contact Us</h2>
-        <p>Have questions or feedback about EvoSim? We'd love to hear from you!</p>
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <section className={styles.contactSection}>
+        <h2 className={styles.contactHeading}>We'd Love to Hear From You</h2>
+        <p className={styles.contactDescription}>Whether you have a question, feedback, or just want to say hello, feel free to reach out. We're always happy to connect with our readers.</p>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" className={styles.form}>
           <input type="hidden" name="form-name" value="contact" />
           <p style={{ display: 'none' }}>
             <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
@@ -32,48 +33,6 @@ export default function Contact() {
           </p>
         </form>
       </section>
-      <style jsx>{`
-        form {
-          max-width: 600px;
-          margin: 2rem auto;
-          padding: 2rem;
-          border: 1px solid #eee;
-          border-radius: 8px;
-          background-color: #f9f9f9;
-        }
-        label {
-          display: block;
-          margin-bottom: 0.5rem;
-          font-weight: bold;
-          color: #333;
-        }
-        input[type="text"],
-        input[type="email"],
-        textarea {
-          width: 100%;
-          padding: 10px;
-          margin-bottom: 1rem;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          font-size: 1em;
-        }
-        textarea {
-          resize: vertical;
-        }
-        button {
-          background-color: #0070f3;
-          color: white;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          font-size: 1em;
-          transition: background-color 0.2s ease-in-out;
-        }
-        button:hover {
-          background-color: #005bb5;
-        }
-      `}</style>
     </Layout>
   );
 }
