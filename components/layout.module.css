@@ -35,31 +35,19 @@
   color: #000; /* Subtle hover effect */
 }
 
-.header nav {
-  text-align: center; /* Center navigation */
-  margin-top: 1.5rem;
-}
-
-.header nav a {
-  margin: 0 15px;
-  font-weight: 400;
-  color: #555;
-  text-decoration: none;
-  font-size: 1.1em;
-}
-
-.header nav a:hover {
-  color: #000;
-  text-decoration: none; /* No underline on hover for clean look */
-}
-
 .strapline {
   font-family: 'Merriweather', serif;
   font-size: 1.4em;
   color: #666;
-  margin-top: 1rem;
+  margin-top: 0.5rem; /* Reduced margin-top */
+  margin-bottom: 1.5rem; /* Added margin-bottom to separate from nav */
   text-align: center;
   font-style: italic;
+}
+
+.header nav {
+  text-align: center; /* Center navigation */
+  margin-top: 0; /* Removed margin-top as strapline now provides spacing */
 }
 
 /* Adjustments for post pages */
