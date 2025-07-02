@@ -4,47 +4,41 @@ import Link from 'next/link';
 
 const Dashboard = () => {
   const [stats, setStats] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchStats = async () => {
-      try {
-        const response = await fetch('/api/stats');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        setStats(data);
-      } catch (e) {
-        setError(e.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+    if (typeof window !== 'undefined') {
+      const pageViews = JSON.parse(localStorage.getItem('pageViews') || '{}');
+      const totalViews = parseInt(localStorage.getItem('totalViews') || '0', 10);
 
-    fetchStats();
+      const pageViewsArray = Object.entries(pageViews).map(([page, count]) => ({
+        page,
+        count,
+      })).sort((a, b) => b.count - a.count);
+
+      setStats({
+        pageViews: pageViewsArray,
+        totalViews: totalViews,
+      });
+    }
   }, []);
 
-  if (loading) return <div style={styles.container}>Loading analytics...</div>;
-  if (error) return <div style={styles.container}>Error: {error}</div>;
-  if (!stats) return <div style={styles.container}>No analytics data available.</div>;
+  if (!stats) return <div style={styles.container}>Loading analytics...</div>;
 
   return (
     <div style={styles.container}>
       <Head>
         <title>Analytics Dashboard</title>
       </Head>
-      <h1 style={styles.heading}>Website Analytics Dashboard</h1>
+      <h1 style={styles.heading}>Website Analytics Dashboard (Local)</h1>
 
       <div style={styles.summaryContainer}>
         <div style={styles.summaryBox}>
-          <h2 style={styles.summaryHeading}>Total Page Views</h2>
+          <h2 style={styles.summaryHeading}>Total Page Views (Local)</h2>
           <p style={styles.summaryValue}>{stats.totalViews}</p>
         </div>
       </div>
 
-      <h2 style={styles.subHeading}>Page View Breakdown</h2>
+      <h2 style={styles.subHeading}>Page View Breakdown (Local)</h2>
       <div style={styles.tableContainer}>
         <table style={styles.table}>
           <thead>
