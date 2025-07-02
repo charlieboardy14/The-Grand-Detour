@@ -21,10 +21,7 @@ export default function Home({ allPostsData }) {
         <title>The Grand Detour</title>
       </Head>
       
-      <section>
-        <h2>Welcome to The Grand Detour</h2>
-        <p>Hitpieces On Any Car (Especially Small Hatchbacks)</p>
-      </section>
+      
       <PostScroller posts={allPostsData} />
 
       <section>

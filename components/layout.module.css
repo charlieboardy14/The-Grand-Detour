@@ -45,6 +45,27 @@
   font-style: italic;
 }
 
+.mainSloganContainer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.mainSloganTitle {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  color: #292929;
+}
+
+.mainSloganText {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5em;
+  line-height: 1.5;
+  color: #555;
+}
+
 .header nav {
   text-align: center; /* Center navigation */
   margin-top: 0; /* Removed margin-top as strapline now provides spacing */

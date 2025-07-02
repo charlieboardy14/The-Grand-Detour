@@ -19,6 +19,10 @@ export default function Layout({ children, home }) {
         <div className={styles.headerContent}>
           <a className={styles.logo}>The Grand Detour</a>
           <p className={styles.strapline}>Hitpieces On Any Car (Especially Small Hatchbacks)</p>
+          <div className={styles.mainSloganContainer}>
+            <h2 className={styles.mainSloganTitle}>Welcome to The Grand Detour</h2>
+            <p className={styles.mainSloganText}>Hitpieces On Any Car (Especially Small Hatchbacks)</p>
+          </div>
           <nav>
             <Link href="/">Home</Link> | <Link href="/posts">Blog</Link> | <Link href="/admin">Admin</Link> | <Link href="/contact">Contact</Link> | <Link href="/request">Request a Hitpiece</Link>
           </nav>
