@@ -15,16 +15,7 @@ export default function Layout({ children, home }) {
           content="The latest news, reviews, and stories from the automotive world."
         />
         <meta name="og:title" content={siteTitle} />
-      {/* Google Analytics */}
-        <Script strategy="beforeInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-EMZVLSXEFN" />
-        <Script id="google-analytics" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-EMZVLSXEFN', { 'branch': process.env.NEXT_PUBLIC_BRANCH });
-          `}
-        </Script>
+      
       </Head>
       <header className={styles.header}>
         <div className={styles.headerContent}>
