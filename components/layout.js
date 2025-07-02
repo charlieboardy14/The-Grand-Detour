@@ -15,17 +15,17 @@ export default function Layout({ children, home }) {
           content="The latest news, reviews, and stories from the automotive world."
         />
         <meta name="og:title" content={siteTitle} />
-      </Head>
       {/* Google Analytics */}
-      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-EMZVLSXEFN" />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-EMZVLSXEFN');
-        `}
-      </Script>
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-EMZVLSXEFN" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EMZVLSXEFN');
+          `}
+        </Script>
+      </Head>
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <a className={styles.logo}>The Grand Detour</a>
