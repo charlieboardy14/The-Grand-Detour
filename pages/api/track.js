@@ -5,8 +5,8 @@ export default async function handler(req, res) {
     const { page, timestamp } = req.body;
 
     try {
-      const db = await getDb();
-      await db.run('INSERT INTO page_views (page, timestamp) VALUES (?, ?)', page, timestamp);
+      const pool = await getDb();
+      await pool.query('INSERT INTO page_views (page, timestamp) VALUES ($1, $2)', [page, timestamp]);
       res.status(200).json({ message: 'Tracking data received and stored' });
     } catch (error) {
       console.error('Error storing tracking data:', error);
