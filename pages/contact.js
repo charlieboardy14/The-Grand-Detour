@@ -6,7 +6,6 @@ export default function Contact() {
     <Layout>
       <Head>
         <title>Contact Us</title>
-        <meta name="description" content="Contact The Grand Detour with your questions or feedback about EvoSim and automotive content." />
       </Head>
       <section>
         <h2>Contact Us</h2>

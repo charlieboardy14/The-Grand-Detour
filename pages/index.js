@@ -19,7 +19,6 @@ export default function Home({ allPostsData }) {
     <Layout home>
       <Head>
         <title>The Grand Detour</title>
-        <meta name="description" content="Hitpieces on any car, especially small hatchbacks. Explore blog posts about various cars and automotive topics." />
       </Head>
       
       <section>

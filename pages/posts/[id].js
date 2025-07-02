@@ -25,7 +25,6 @@ export default function Post({ postData }) {
     <Layout>
         <Head>
             <title>{postData.title}</title>
-            <meta name="description" content={postData.description || postData.contentHtml.replace(/<[^>]*>?/gm, '').substring(0, 160)} />
         </Head>
         <article>
             <h1 className={Layout.postTitle}>{postData.title}</h1>
