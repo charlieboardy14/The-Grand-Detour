@@ -14,6 +14,15 @@ export default function Layout({ children, home }) {
           content="The latest news, reviews, and stories from the automotive world."
         />
         <meta name="og:title" content={siteTitle} />
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMZVLSXEFN"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-EMZVLSXEFN');
+        </script>
       </Head>
       <header className={styles.header}>
         <div className={styles.headerContent}>
