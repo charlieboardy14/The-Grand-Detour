@@ -22,7 +22,7 @@ export default function Layout({ children, home }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-EMZVLSXEFN');
+            gtag('config', 'G-EMZVLSXEFN', { 'branch': process.env.NEXT_PUBLIC_BRANCH });
           `}
         </Script>
       </Head>
