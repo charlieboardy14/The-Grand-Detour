@@ -1,14 +1,22 @@
-export default function handler(req, res) {
+import Redis from 'ioredis';
+
+const redis = new Redis(process.env.REDIS_URL);
+
+export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { page, timestamp } = req.body;
-    console.log(`Tracking data received: Page - ${page}, Timestamp - ${timestamp}`);
+    const { page } = req.body; // We only need the page for counting
 
-    // In a real application, you would save this data to a database.
-    // For example, using a simple file-based log for demonstration:
-    // const fs = require('fs');
-    // fs.appendFileSync('./tracking_log.txt', JSON.stringify(req.body) + '\n');
+    try {
+      // Increment total page views
+      await redis.incr('total_page_views');
+      // Increment views for specific page
+      await redis.incr(`page_views:${page}`);
 
-    res.status(200).json({ message: 'Tracking data received' });
+      res.status(200).json({ message: 'Tracking data received and stored in Redis' });
+    } catch (error) {
+      console.error('Error storing tracking data in Redis:', error);
+      res.status(500).json({ message: 'Error storing tracking data' });
+    }
   } else {
     res.status(405).json({ message: 'Method Not Allowed' });
   }

@@ -1,18 +1,31 @@
-import getDb from '../../lib/db';
+import Redis from 'ioredis';
+
+const redis = new Redis(process.env.REDIS_URL);
 
 export default async function handler(req, res) {
   if (req.method === 'GET') {
     try {
-      const pool = await getDb();
-      const pageViewsResult = await pool.query('SELECT page, COUNT(*) as count FROM page_views GROUP BY page ORDER BY count DESC');
-      const totalViewsResult = await pool.query('SELECT COUNT(*) as count FROM page_views');
+      const totalViews = await redis.get('total_page_views') || 0;
+
+      // Get all page view keys (e.g., 'page_views:/about')
+      const keys = await redis.keys('page_views:*');
+      const pageViews = [];
+
+      for (const key of keys) {
+        const page = key.replace('page_views:', '');
+        const count = await redis.get(key);
+        pageViews.push({ page, count: parseInt(count, 10) });
+      }
+
+      // Sort by count in descending order
+      pageViews.sort((a, b) => b.count - a.count);
 
       res.status(200).json({
-        pageViews: pageViewsResult.rows,
-        totalViews: totalViewsResult.rows[0].count,
+        pageViews: pageViews,
+        totalViews: parseInt(totalViews, 10),
       });
     } catch (error) {
-      console.error('Error fetching stats:', error);
+      console.error('Error fetching stats from Redis:', error);
       res.status(500).json({ message: 'Error fetching stats' });
     }
   } else {
