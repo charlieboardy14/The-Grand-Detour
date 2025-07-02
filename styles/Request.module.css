@@ -4,19 +4,6 @@
   padding: 20px;
 }
 
-h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 1.5rem;
-}
-
-p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #555;
-  line-height: 1.6;
-}
-
 .form {
   max-width: 600px;
   margin: 2rem auto;
@@ -68,10 +55,4 @@ p {
 
 .submitButton:hover {
   background-color: #005bb5;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem;
-  }
 }

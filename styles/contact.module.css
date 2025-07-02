@@ -1,4 +1,23 @@
-form {
+.contactSection {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contactHeading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.contactDescription {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.form {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
@@ -6,12 +25,14 @@ form {
   border-radius: 8px;
   background-color: #f9f9f9;
 }
+
 label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
   color: #333;
 }
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -22,9 +43,11 @@ textarea {
   border-radius: 4px;
   font-size: 1em;
 }
+
 textarea {
   resize: vertical;
 }
+
 button {
   background-color: #0070f3;
   color: white;
@@ -35,6 +58,7 @@ button {
   font-size: 1em;
   transition: background-color 0.2s ease-in-out;
 }
+
 button:hover {
   background-color: #005bb5;
 }
