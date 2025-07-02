@@ -16,8 +16,8 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
       {/* Google Analytics */}
-        <Script strategy="beforeInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-EMZVLSXEFN" />
-        <Script id="google-analytics" strategy="beforeInteractive">
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-EMZVLSXEFN" />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
